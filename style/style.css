@@ -177,33 +177,31 @@
 }
 
 #bouton {
-    position: relative;
-    z-index: 2; 
-    
-    padding: 60px 55px;
-    background: rgba(255, 255, 255, 0.15); /* Transparence légère */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 2; 
+  padding: 80px 55px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
     
 }
 
 
 #bouton a {
-    text-decoration: none;
-    color: #E5989B; 
-    font-family: var(--primary-font);
-    font-size: 1.1rem;
-    font-weight: 400;
-    text-align: justify;
+  text-decoration: none;
+  color: #E5989B; 
+  font-family: var(--primary-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: justify;
 }
 
 .halo3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    z-index: 1;
-    width: 280px; 
-    opacity: 0.8; 
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+  opacity: 0.8; 
 }
