@@ -150,6 +150,12 @@
   bottom: 0;
 }
 
+.sakura4 {
+  position: absolute;
+  left: 15%;
+  bottom: 40%;
+}
+
 .petale6 {
   position: absolute;
   left: 40%;
@@ -162,6 +168,11 @@
   bottom: -5%;
 }
 
+.petale8 {
+  position: absolute;
+  left: 30%;
+  bottom: -5%;
+}
 
 .section-bouton {
     display: flex;
