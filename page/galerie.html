@@ -6,6 +6,7 @@
     <title>Sakura Shower</title>
     <link rel="icon" type="image/png" href="src/svg/sakura.svg" />
     <link rel="stylesheet" href="../style/style.css"  >
+    <link rel="stylesheet" href="../style/galerie.css"  >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,48 +27,30 @@
     </section>
 
 
-    <section class="container" id="presentation">
-        
-        <img id="img-pres" src="../src/image.jpg" alt="image de fleur">
-        <img class ="halo2" src="../src/svg/halo2.svg">
-        <img class="sakura" src="../src/svg/sakura.svg" data-speed="0.1">
-        
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit impedit accusantium aspernatur iusto</p>
-        <img class ="halo" src="../src/svg/halo.svg">
-        <img class="petale" src="../src/svg/petale.svg" data-speed="0.3">
-        <img class="petale2" src="../src/svg/petale2.svg" data-speed="0.2">
+
+    <section class="gallery container">
+
+        <img class="photo" src="../src/image.jpg">
+        <img class="photo" src="../src/header.jpg">
+        <img class="photo" src="../src/image2.jpg">
+        <img class="photo" src="../src/image2_glass.jpg">
+        <img class="photo" src="../src/image_glass.jpg">
+
     </section>
+    
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
 
-
-    <section class="container" id="suite">
-        
-        <img id="img-pres" src="../src/image2_glass.jpg" alt="image de fleur">
-        <img class="sakura2" src="../src/svg/sakura2.svg" data-speed="0.15">
-        
-        
-        <img class="petale3" src="../src/svg/petale3.svg" data-speed="0.4">
-        <img class="petale4" src="../src/svg/petale4.svg" data-speed="0.2">
-        <img class="petale5" src="../src/svg/petale5.svg" data-speed="0.3">
-        
-        <img class="sakura3" src="../src/svg/sakura3.svg" data-speed="0.1">
-        
-        <img class="petale6" src="../src/svg/petale6.svg" data-speed="0.2">
-        <img class="petale7" src="../src/svg/petale7.svg" data-speed="0.3">
-    </section>
-
-    <section class="section-bouton">
-    <div class="bouton-wrapper">
-        <div id="bouton">
-            <a href="page/galerie.html"> Discover the  gallery</a>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="">
         </div>
-        
-        <img class="halo3" src="../src/svg/halo3.svg" alt="">
     </div>
-</section>
+
 
 
 <script>
-    window.addEventListener('scroll', function() {
+    /* window.addEventListener('scroll', function() {
         let parallaxElements = document.querySelectorAll('[data-speed]');
         
         // Pour chaque élément, on calcule sa nouvelle position
@@ -79,7 +62,32 @@
             // On applique le mouvement vers le haut via transform
             el.style.transform = `translateY(${yPos}px)`;
         });
-    });
-</script>
+    }); */
+
+    const photos = document.querySelectorAll(".photo");
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.querySelector(".close");
+
+        photos.forEach(photo => {
+            photo.addEventListener("click", () => {
+                const img = photo.src;
+                
+                modalImg.src = img;
+
+                modal.classList.add("active");
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("active");
+            }
+        });
+</script> 
 </body>
 </html>
