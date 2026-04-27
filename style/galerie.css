@@ -1,11 +1,10 @@
 
 .gallery{
     margin-top: 120px;
-    column-count: 3;
+    column-count: 2;
     column-gap: 15px;
     margin-bottom: 8vh;
-    scroll-behavior: smooth;
-    position: relative;
+    
 }
 
 .gallery img{
@@ -13,6 +12,7 @@
     height: auto;
     border-radius: 1em;
     margin: 0 0 15px 0;
+    
 }
 
 .gallery img:hover{
