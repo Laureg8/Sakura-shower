@@ -1,20 +1,22 @@
 
 .gallery{
     margin-top: 120px;
-  column-count: 3;
-  column-gap: 15px;
-  margin-bottom: 8vh;
+    column-count: 3;
+    column-gap: 15px;
+    margin-bottom: 8vh;
+    scroll-behavior: smooth;
+    position: relative;
 }
 
 .gallery img{
-  width: 100%;
-  height: auto;
-  border-radius: 1em;
-  margin: 0 0 15px 0;
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    margin: 0 0 15px 0;
 }
 
 .gallery img:hover{
-  transform: scale(0.99);
+    transform: scale(0.99);
 }
 
 
