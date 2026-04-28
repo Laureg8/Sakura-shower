@@ -4,7 +4,15 @@
     column-count: 2;
     column-gap: 15px;
     margin-bottom: 8vh;
+    position: relative;
     
+}
+
+.sakura6, .sakura5, .sakura7, 
+.petale9, .petale10, .petale11, .petale12, .petale13, .petale14 {
+    position: absolute;
+    /* Empêche l'élément d'être affecté par le système de colonnes */
+    break-inside: avoid; 
 }
 
 .gallery img{
@@ -78,4 +86,65 @@
     font-size: 28px;
     color: white;
     cursor: pointer;
+}
+
+.deco {
+    position: absolute !important; 
+    width: 60px !important;       
+    height: auto !important;
+}
+
+
+.sakura6 {
+  position: absolute;
+  left: 60%;
+  top: 0;
+}
+
+.petale9 {
+  position: absolute;
+  left: 40%;
+  top: 15%;
+}
+
+.petale10 {
+  position: absolute;
+  left: 65%;
+  top: 30%;
+}
+
+.petale11 {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+
+.sakura5 {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+}
+
+.sakura7 {
+  position: absolute;
+  left: 15%;
+  bottom: 40%;
+}
+
+.petale12 {
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
+}
+
+.petale13 {
+  position: absolute;
+  left: 60%;
+  bottom: -5%;
+}
+
+.petale14 {
+  position: absolute;
+  left: 30%;
+  bottom: -5%;
 }
